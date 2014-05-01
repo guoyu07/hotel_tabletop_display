@@ -16,13 +16,18 @@ require.config({
         },
         bootstrap: {
             deps: ['jquery']
+        },
+        slick: {
+            deps: ['jquery']
         }
     },
     paths: {
         jquery: '../lib/jquery',
         underscore: '../lib/underscore',
         backbone: '../lib/backbone',
-        bootstrap: '../../css/bootstrap/js/bootstrap'
+        bootstrap: '../../css/bootstrap/js/bootstrap',
+        text: '../lib/require-text',
+        slick: '../../css/slick/slick'
     }
 });
 

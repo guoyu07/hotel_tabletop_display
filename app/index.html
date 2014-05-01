@@ -5,9 +5,21 @@
   <title>App</title>
   <!-- Stylesheets go here -->
   <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
 </head>
 <body id='app'>
-  <!-- Start the app -->
-  <script data-main="js/main" src="js/lib/require.js"></script>
+	<div class="event-grid">
+		<span class="event-grid-title">UPCOMING <strong>EVENTS</strong></span>
+		<div id="grid-container" class="grid">
+			
+		</div>
+	</div>
+	<div id="activity-feed-container" class="activity-feed">
+		<span class="activity-feed-title">ACTIVITY <strong>FEED</strong></span>
+	</div>
+	
+	<!-- Start the app -->
+	<script data-main="js/main" src="js/lib/require.js"></script>
 </body>
 </html>

@@ -2,8 +2,10 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'common'
-], function($, _, Backbone, Common) {
+    'common',
+    'views/activityfeed',
+    'views/eventgrid'
+], function($, _, Backbone, Common, ActivityFeedView, EventGridView) {
     /**
      * The top-level piece of UI for the App.
      */
@@ -17,7 +19,8 @@ define([
         initialize: function() {
             // Make UI events (make sure you have required it!)
             // this.someView = new SomeView();
-
+            this.activityFeedView = new ActivityFeedView();
+            this.eventGridView = new EventGridView();
 
             // Fetch from collections
             // SomeCollection.fetch();
@@ -29,6 +32,11 @@ define([
         render: function() {
 
             // Populate divs
+            $("#activity-feed-container").append(this.activityFeedView.$el);
+            this.activityFeedView.render();
+
+            $("#grid-container").append(this.eventGridView.$el);
+            this.eventGridView.render();
             // $("#some_div").append(this.someView.$el);
             // this.someView.render();
             
