@@ -29,7 +29,6 @@ body {
   font-size: 1.05em;
 }
 .event-grid .grid {
-  border: 4px dashed black;
   position: relative;
   height: 87%;
   width: auto;

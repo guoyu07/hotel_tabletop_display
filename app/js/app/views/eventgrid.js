@@ -15,8 +15,7 @@ define([
 			this.$el.find(".slideshow").slick({
 				touchMove: true,
 				swipe: true,
-				draggable: true,
-				dots: true
+				draggable: true
 			});
 		}
 	});
