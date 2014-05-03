@@ -27,7 +27,8 @@ require.config({
         backbone: '../lib/backbone',
         bootstrap: '../../css/bootstrap/js/bootstrap',
         text: '../lib/require-text',
-        slick: '../../css/slick/slick'
+        slick: '../../css/slick/slick',
+        moment: '../lib/moment'
     }
 });
 

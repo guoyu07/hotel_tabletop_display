@@ -37,8 +37,6 @@ define([
 
             $("#grid-container").append(this.eventGridView.$el);
             this.eventGridView.render();
-            // $("#some_div").append(this.someView.$el);
-            // this.someView.render();
             
         },
         
