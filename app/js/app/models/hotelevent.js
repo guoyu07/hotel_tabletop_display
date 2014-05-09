@@ -15,6 +15,16 @@ define([
 			cover_image: null,
 			relevant_interests: ["Interest 1", "Interest 2"],
 			attending_count: 0
+		},
+		get_time_and_location: function(){
+			var time = "";
+			if(this.get("start_time").isBefore(moment())){
+				time = "NOW";
+			}else{
+				time = this.get("start_time").format("h a").toUpperCase();
+			}
+			var location = this.get("location");
+			return time + "@" + location;
 		}
 	});
 	return HotelEvent;

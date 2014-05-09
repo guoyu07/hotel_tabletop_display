@@ -8,6 +8,5 @@ define([
 	var EventSet = Backbone.Collection.extend({
 		model: HotelEvent
 	});
-
 	return new EventSet();
 });

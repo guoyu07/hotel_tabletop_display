@@ -1,91 +1,81 @@
 <div class="slideshow">
-	<div class="slide">
-		<div class="box-1">
-			<h1 class="event-title">WINE TASTING</h1>
-			<p class="event-description">Lots of good wines here, taste flavors from all around the world</p>
-			<h2 class="event-time-location">NOW @THE LOBBY</h2>
-			<div class="bar-1">
-				<span class="bar-text">COOKING</span>
+	<% _.each(events, function(event, index, list){%>
+		<% if(index%4==0){ %>
+			<div class="slide">
+				<div class="box-1">
+					<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
+					<p class="event-description"><%=event.get("description")%></p>
+					<h3 class="event-time-location"><%= event.get_time_and_location() %></h3>
+					<div class="bar-2">
+						<span class="bar-text">BUSINESS</span>
+					</div>
+					<div class="bar-3">
+						<span class="bar-text">TECHNOLOGY</span>
+					</div>
+					<div class="bar-4">
+						<span class="bar-text">COOKING</span>
+					</div>
+					<span class="attending-number">16</span>
+					<span class="attending-word">ATTENDING</span>
+					<img class="attending-icon" src="assets/businessman.png">
+				</div>
+		<% }else if(index%4 == 1){ %>
+			<div class="box-2">
+				<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
+				<p class="event-description">A bunch of people showed up to this place, you should meet them</p>
+				<h2 class="event-time-location"><%= event.get_time_and_location() %></h2>
+				<div class="bar-1">
+					<span class="bar-text">PR</span>
+				</div>
+				<div class="bar-2">
+					<span class="bar-text">COMMUNICATION</span>
+				</div>
+				<div class="bar-3">
+					<span class="bar-text">TECHNOLOGY</span>
+				</div>
+				<span class="attending-number">11</span>
+				<span class="attending-word">ATTENDING</span>
+				<img class="attending-icon" src="assets/businessman.png">
 			</div>
-			<div class="bar-2">
-				<span class="bar-text">BUSINESS</span>
+		<% }else if(index%4 == 2){ %>
+			<div class="box-3">
+				<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
+				<p class="event-description">A bunch of people showed up to this place, you should meet them</p>
+				<h2 class="event-time-location"><%= event.get_time_and_location() %></h2>
+				<div class="bar-1">
+					<span class="bar-text">PR</span>
+				</div>
+				<div class="bar-2">
+					<span class="bar-text">COMMUNICATION</span>
+				</div>
+				<div class="bar-3">
+					<span class="bar-text">COMMUNICATION</span>
+				</div>
+				<span class="attending-number">17</span>
+				<span class="attending-word">ATTENDING</span>
+				<img class="attending-icon" src="assets/businessman.png">
 			</div>
-			<div class="bar-3">
-				<span class="bar-text">TECHNOLOGY</span>
+		<% }else{ %>
+			<div class="box-4">
+				<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
+				<p class="event-description">A bunch of people showed up to this place, you should meet them</p>
+				<h2 class="event-time-location"><%= event.get_time_and_location() %></h2>
+				<div class="bar-1">
+					<span class="bar-text">PR</span>
+				</div>
+				<div class="bar-2">
+					<span class="bar-text">COMMUNICATION</span>
+				</div>
+				<div class="bar-3">
+					<span class="bar-text">COMMUNICATION</span>
+				</div>
+				<span class="attending-number">17</span>
+				<span class="attending-word">ATTENDING</span>
+				<img class="attending-icon" src="assets/businessman.png">
 			</div>
-			<div class="bar-4">
-				<span class="bar-text">COOKING</span>
-			</div>
-			<span class="attending-number">16</span>
-			<span class="attending-word">ATTENDING</span>
-			<img class="attending-icon" src="assets/businessman.png">
+		<% } %>
+		<% if (index%4==3 || index == list.length - 1){%>
 		</div>
-		<div class="box-2">
-			<h1 class="event-title">MEET & GREET</h1>
-			<p class="event-description">A bunch of people showed up to this place, you should meet them</p>
-			<h2 class="event-time-location">NOW @THE BAR</h2>
-			<div class="bar-1">
-				<span class="bar-text">PR</span>
-			</div>
-			<div class="bar-2">
-				<span class="bar-text">COMMUNICATION</span>
-			</div>
-			<div class="bar-3">
-				<span class="bar-text">TECHNOLOGY</span>
-			</div>
-			<div class="bar-4">
-				<span class="bar-text">TECHNOLOGY</span>
-			</div>
-			<span class="attending-number">11</span>
-			<span class="attending-word">ATTENDING</span>
-			<img class="attending-icon" src="assets/businessman.png">
-		</div>
-		<div class="box-3">
-			<h1 class="event-title">DESIGN VISIONS</h1>
-			<p class="event-description">A bunch of people showed up to this place, you should meet them</p>
-			<h2 class="event-time-location">9 PM @ROOM 17</h2>
-			<div class="bar-1">
-				<span class="bar-text">PR</span>
-			</div>
-			<div class="bar-2">
-				<span class="bar-text">COMMUNICATION</span>
-			</div>
-			<div class="bar-3">
-				<span class="bar-text">COMMUNICATION</span>
-			</div>
-			<div class="bar-4">
-				<span class="bar-text">COMMUNICATION</span>
-			</div>
-			<span class="attending-number">17</span>
-			<span class="attending-word">ATTENDING</span>
-			<img class="attending-icon" src="assets/businessman.png">
-		</div>
-		<div class="box-4">
-			<h1 class="event-title">MEDIA NIGHT</h1>
-			<p class="event-description">A bunch of people showed up to this place, you should meet them</p>
-			<h2 class="event-time-location">9 PM @ROOM 17</h2>
-			<div class="bar-1">
-				<span class="bar-text">PR</span>
-			</div>
-			<div class="bar-2">
-				<span class="bar-text">COMMUNICATION</span>
-			</div>
-			<div class="bar-3">
-				<span class="bar-text">COMMUNICATION</span>
-			</div>
-			<div class="bar-4">
-				<span class="bar-text">COMMUNICATION</span>
-			</div>
-			<span class="attending-number">17</span>
-			<span class="attending-word">ATTENDING</span>
-			<img class="attending-icon" src="assets/businessman.png">
-		</div>
+		<% } %>
+	<% }); %>
 	</div>
-	<div style="position: relative; width: 900px; height: 600px;">
-		<div style="position: absolute; width: 48%; height: 49%; margin-top: 1%; margin-left: 1%; background-color: rgba(240,240,240,0.3);"></div>
-		<div style="position: absolute; width: 48%; height: 49%;  margin-top: 1%; margin-left:51%; background-color: rgba(240,240,240,0.3)"></div>
-		<div style="position: absolute; width: 48%; height: 49%;  margin-top: 37%; margin-left:51%; background-color: rgba(240,240,240,0.3)"></div>
-		<div style="position: absolute; width: 48%; height: 49%;  margin-top: 37%; margin-left:1%; background-color: rgba(240,240,240,0.3)"></div>
-	</div>
-
-</div>
