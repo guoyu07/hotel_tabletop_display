@@ -19,10 +19,6 @@
 						<span class="bar-text"><%= event.get("relevant_interests")[2].toUpperCase() %></span>
 					</div>
 					<% } %>
-					<span class="attending-number"><%= event.get("attending_count")%></span>
-					<span class="attending-word">ATTENDING</span>
-					<img class="attending-icon" src="assets/businessman.png">
-				</div>
 		<% }else if(index%4 == 1){ %>
 			<div class="box box-2">
 				<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
@@ -41,10 +37,6 @@
 					<span class="bar-text"><%= event.get("relevant_interests")[2].toUpperCase() %></span>
 				</div>
 				<% } %>
-				<span class="attending-number"><%= event.get("attending_count")%></span>
-				<span class="attending-word">ATTENDING</span>
-				<img class="attending-icon" src="assets/businessman.png">
-			</div>
 		<% }else if(index%4 == 2){ %>
 			<div class="box box-3">
 				<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
@@ -63,10 +55,6 @@
 					<span class="bar-text"><%= event.get("relevant_interests")[2].toUpperCase() %></span>
 				</div>
 				<% } %>
-				<span class="attending-number"><%= event.get("attending_count")%></span>
-				<span class="attending-word">ATTENDING</span>
-				<img class="attending-icon" src="assets/businessman.png">
-			</div>
 		<% }else{ %>
 			<div class="box box-4">
 				<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
@@ -85,11 +73,11 @@
 					<span class="bar-text"><%= event.get("relevant_interests")[2].toUpperCase() %></span>
 				</div>
 				<% } %>
-				<span class="attending-number"><%= event.get("attending_count")%></span>
-				<span class="attending-word">ATTENDING</span>
-				<img class="attending-icon" src="assets/businessman.png">
-			</div>
 		<% } %>
+		<span class="attending-number"><%= event.get("attending_count")%></span>
+		<span class="attending-word">ATTENDING</span>
+		<img class="attending-icon" src="assets/businessman.png">
+	</div>
 		<% if (index%4==3 || index == list.length - 1){%>
 		</div>
 		<% } %>
