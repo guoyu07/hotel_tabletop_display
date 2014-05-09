@@ -1,0 +1,199 @@
+body {
+  background-image: url('../assets/wild_flowers.png');
+  background-repeat: repeat;
+  font-family: 'Merriweather', serif;
+}
+.event-grid {
+  position: absolute;
+  height: 700px;
+  width: 1000px;
+  top: 50px;
+  left: 400px;
+  background-color: rgba(20, 20, 20, 0.5);
+}
+.event-grid .event-grid-title {
+  position: relative;
+  width: 1000px;
+  height: 35px;
+  color: white;
+  font-size: 2.5em;
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+}
+.event-grid .event-grid-title strong {
+  font-size: 1.05em;
+}
+.event-grid .grid {
+  position: relative;
+  height: 612.5px;
+  width: 1000px;
+  top: 17.5px;
+}
+.event-grid .grid .slideshow {
+  position: relative;
+  width: 940px;
+  height: 612.5px;
+  left: 30px;
+  right: 30px;
+}
+.event-grid .grid .slideshow .slide {
+  position: relative;
+  width: 100%;
+  height: 612.5px;
+}
+.event-grid .grid .slideshow .slide .box {
+  position: absolute;
+  width: 450px;
+  height: 280px;
+}
+.event-grid .grid .slideshow .slide .box-1,
+.event-grid .grid .slideshow .slide .box-3 {
+  margin-left: 10px;
+}
+.event-grid .grid .slideshow .slide .box-1,
+.event-grid .grid .slideshow .slide .box-2 {
+  margin-top: 10px;
+}
+.event-grid .grid .slideshow .slide .box-3,
+.event-grid .grid .slideshow .slide .box-4 {
+  margin-top: 300px;
+}
+.event-grid .grid .slideshow .slide .box-1,
+.event-grid .grid .slideshow .slide .box-4 {
+  background-color: rgba(240, 240, 240, 0.3);
+}
+.event-grid .grid .slideshow .slide .box-1 .event-description,
+.event-grid .grid .slideshow .slide .box-4 .event-description {
+  color: #e6e6e6;
+}
+.event-grid .grid .slideshow .slide .box-2,
+.event-grid .grid .slideshow .slide .box-3 {
+  background-color: rgba(240, 240, 240, 0.7);
+}
+.event-grid .grid .slideshow .slide .box-2 .event-description,
+.event-grid .grid .slideshow .slide .box-3 .event-description {
+  color: #646464;
+}
+.event-grid .grid .slideshow .slide .box-2,
+.event-grid .grid .slideshow .slide .box-4 {
+  margin-left: 480px;
+}
+.event-grid .grid .slideshow .slide .bar-text {
+  font-size: 10px;
+  display: block;
+  margin-right: 5px;
+  margin-top: 5px;
+  text-align: right;
+}
+.event-grid .grid .slideshow .slide .bar {
+  position: absolute;
+  background-color: rgba(240, 240, 240, 0.9);
+  width: 150px;
+  height: 20px;
+}
+.event-grid .grid .slideshow .slide .bar-3 {
+  bottom: 10px;
+}
+.event-grid .grid .slideshow .slide .bar-2 {
+  bottom: 35px;
+}
+.event-grid .grid .slideshow .slide .bar-1 {
+  bottom: 60px;
+}
+.event-grid .grid .slideshow .slide .event-title {
+  text-align: center;
+}
+.event-grid .grid .slideshow .slide .event-description {
+  text-align: center;
+  word-wrap: break-word;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.event-grid .grid .slideshow .slide .event-time-location {
+  text-align: center;
+  color: #820000;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+.event-grid .grid .slideshow .slide .attending-number {
+  position: absolute;
+  bottom: 32px;
+  font-size: 2em;
+  opacity: 0.5;
+  right: 50px;
+}
+.event-grid .grid .slideshow .slide .attending-word {
+  position: absolute;
+  bottom: 17px;
+  font-size: 1em;
+  opacity: 0.5;
+  right: 50px;
+}
+.event-grid .grid .slideshow .slide .attending-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  height: 50px;
+  opacity: 0.5;
+}
+.activity-feed {
+  position: absolute;
+  height: 700px;
+  width: 350px;
+  top: 50px;
+  left: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.activity-feed .activity-feed-title {
+  font-size: 2.5em;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+}
+.activity-feed .activity-feed-title strong {
+  font-size: 1.05em;
+}
+.activity-feed .activity-feed-list-div {
+  position: absolute;
+  overflow: scroll;
+  top: 10%;
+  bottom: 3%;
+  right: 2%;
+  left: 2%;
+}
+.activity-feed .activity-feed-list-div .activity-list {
+  list-style-type: none;
+  margin-top: 30px;
+}
+.activity-feed .activity-feed-list-div .activity-list .activity-item {
+  margin-left: -15%;
+}
+.activity-feed .activity-feed-list-div .activity-list .activity-item .pre-title {
+  position: relative;
+  color: #c8c8c8;
+  margin-bottom: 0px;
+  left: 0px;
+  text-align: center;
+}
+.activity-feed .activity-feed-list-div .activity-list .activity-item .event-name {
+  position: relative;
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.activity-feed .activity-feed-list-div .activity-list .activity-item .start-time {
+  position: relative;
+  color: #c8c8c8;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8em;
+}
+.activity-feed .activity-feed-list-div .activity-list .activity-item .ellipsis {
+  position: relative;
+  color: #c8c8c8;
+  text-align: center;
+}

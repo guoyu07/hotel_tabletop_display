@@ -24,8 +24,9 @@ define([
 							"location": "Marriott Business Center",
 							"cover_image": "http://mel-devel.media.mit.edu/sixdegrees/media/cache/4a/70/4a7039081e44793ff688cb9dad25df92.jpg",
 							"relevant_interests": [
-									"Design",
-									"Technology"
+									"1",
+									"2",
+									"3"
 							],
 							"attending_count": 6
 					},
@@ -37,7 +38,11 @@ define([
 							"end_time": null,
 							"location": "Champions Sports Bar",
 							"cover_image": "http://mel-devel.media.mit.edu/sixdegrees/media/cache/bd/26/bd261ccde6c50262f45ecb3f61990656.jpg",
-							"relevant_interests": [],
+							"relevant_interests": [
+							"1",
+							"2",
+							"3"
+							],
 							"attending_count": 2
 					},
 					{
@@ -49,8 +54,9 @@ define([
 							"location": "Marriott Business Center",
 							"cover_image": "http://mel-devel.media.mit.edu/sixdegrees/media/cache/4a/70/4a7039081e44793ff688cb9dad25df92.jpg",
 							"relevant_interests": [
-									"Design",
-									"Technology"
+									"1",
+									"2",
+									"3"
 							],
 							"attending_count": 6
 					},
@@ -63,8 +69,9 @@ define([
 							"location": "Marriott Business Center",
 							"cover_image": "http://mel-devel.media.mit.edu/sixdegrees/media/cache/4a/70/4a7039081e44793ff688cb9dad25df92.jpg",
 							"relevant_interests": [
-									"Design",
-									"Technology"
+									"1",
+									"2",
+									"3"
 							],
 							"attending_count": 6
 					},
@@ -77,8 +84,9 @@ define([
 							"location": "Marriott Business Center",
 							"cover_image": "http://mel-devel.media.mit.edu/sixdegrees/media/cache/4a/70/4a7039081e44793ff688cb9dad25df92.jpg",
 							"relevant_interests": [
-									"Design",
-									"Technology"
+									"1",
+									"2",
+									"3"
 							],
 							"attending_count": 6
 					}];
