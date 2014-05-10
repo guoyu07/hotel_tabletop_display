@@ -91,19 +91,8 @@ define([
 							"attending_count": 6
 					}];
 			_.each(events, function(event){
-				EventSet.add(new HotelEvent({
-					id: event.id,
-					title: event.title,
-					description: event.description,
-					location: event.location,
-					start_time: moment(event.start_time),
-					end_time: moment(event.end_time),
-					cover_image: event.cover_image,
-					relevant_interests: event.relevant_interests,
-					attending_count: event.attending_count
-				}));
+				EventSet.add(new HotelEvent(event));
 			});
-			//console.log(moment("2014-06-17T17:00:00Z").format("h a").toUpperCase());
 			this.$el.html(this.template({
 				events: EventSet.models
 			}));
@@ -111,6 +100,23 @@ define([
 				touchMove: true,
 				swipe: true,
 				draggable: true
+			});
+			this.animateEventBoxes();
+		},
+		animateEventBoxes: function(){
+			this.$el.find('.bar').animate({width:"150px"},1000);
+			this.$el.find(".attending-number").each(function(index, value){
+				var item = $(value);
+				var iterations = Number(item.html());
+				var i = 0;
+				var recurse = function(){
+					item.html(i);
+					i += 1;
+					if(i <= iterations){
+						setTimeout(recurse, 100);
+					}
+				}
+				setTimeout(recurse, 100);
 			});
 		}
 	});

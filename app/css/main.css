@@ -89,7 +89,6 @@ body {
 .event-grid .grid .slideshow .slide .bar {
   position: absolute;
   background-color: rgba(240, 240, 240, 0.9);
-  width: 150px;
   height: 20px;
 }
 .event-grid .grid .slideshow .slide .bar-3 {
