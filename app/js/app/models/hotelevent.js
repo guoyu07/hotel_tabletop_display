@@ -7,14 +7,14 @@ define([
 	var HotelEvent = Backbone.Model.extend({
 		defaults: {
 			id: null,
-			title: "Event Title",
-			description: "Event Description",
-			location: "Event Location",
-			start_time: (new Date()).toString(),
-			end_time: (new Date()).toString(),
+			title: null,
+			description: null,
+			location: null,
+			start_time: null,
+			end_time: null,
 			cover_image: null,
-			relevant_interests: ["Interest 1", "Interest 2"],
-			attending_count: 0,
+			relevant_interests: null,
+			attending_count: null,
 			start_moment: null,
 			end_moment: null
 		},
