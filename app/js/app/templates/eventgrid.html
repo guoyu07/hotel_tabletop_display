@@ -5,7 +5,7 @@
 		<% }else if(index%4 == 2){ %> <div class="box box-3">
 		<% }else{ %> <div class="box box-4"> <% } %>
 		<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
-		<p class="event-description">A bunch of people showed up to this place, you should meet them</p>
+		<p class="event-description"><%=event.get("description")%></p>
 		<h2 class="event-time-location"><%= event.get_time_and_location() %></h2>
 
 		<% if(event.get("relevant_interests").length > 0) { %>

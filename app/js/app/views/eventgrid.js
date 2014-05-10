@@ -4,11 +4,10 @@ define([
 	'backbone',
 	'text!templates/eventgrid.html',
 	'collections/eventset',
-	'collections/activityset',
 	'models/hotelevent',
 	'moment',
 	'slick'
-], function($, _, Backbone, eventGridTemplate, EventSet, ActivitySet, HotelEvent){
+], function($, _, Backbone, eventGridTemplate, EventSet, HotelEvent){
 	var EventGridView = Backbone.View.extend({
 		template: _.template(eventGridTemplate),
 		initialize: function(){
@@ -17,11 +16,6 @@ define([
 			EventSet.fetch({
 				success:function(data){
 					self.render();
-				}
-			});
-			ActivitySet.fetch({
-				success: function(data){
-					console.log(ActivitySet);
 				}
 			});
 		},
