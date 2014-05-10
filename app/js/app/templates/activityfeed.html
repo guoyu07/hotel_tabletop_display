@@ -1,10 +1,12 @@
 <div class="activity-feed-list-div">
 	<ul class="activity-list">
-		<div class="activity-item">
-			<p class="pre-title">Someone is attending the</p>
-			<p class="activity-text">MEET & GREET EVENT <br> @ THE LOBBY</p>
-			<p class="start-time">~5 MINUTES AGO~</p>
-			<p class="ellipsis">. . .</p>
-		</div>
+		<% _.each(activities, function(activity){ %>
+			<div class="activity-item">
+				<p class="pre-title">Someone is attending the</p>
+				<p class="activity-text">MEET & GREET EVENT <br> @ THE LOBBY</p>
+				<p class="start-time">~<%= activity.get_relative_time_string()%>~</p>
+				<p class="ellipsis">. . .</p>
+			</div>
+		<% }) %>
 	</ul>
 </div>

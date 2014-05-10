@@ -11,15 +11,19 @@ define([
 		tagName: "div",
 		template: _.template(activityFeedTemplate),
 		initialize: function(){
+			var self = this;
 			ActivitySet.fetch({
 				success: function(data){
-					var authors = new Backbone.Collection(ActivitySet.pluck("author")).pluck("location_name");
-					console.log(authors);
+					self.render();
 				}
 			});
 		},
 		render: function(){
-			this.$el.html(this.template());
+			var reversed = [];
+			ActivitySet.each(function(x){
+				reversed.unshift(x);
+			});
+			this.$el.html(this.template({activities:reversed}));
 		}
 	});
 
