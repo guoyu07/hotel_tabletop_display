@@ -9,7 +9,7 @@
 		<h2 class="event-time-location"><%= event.get_time_and_location() %></h2>
 
 		<% if(event.get("relevant_interests").length > 0) { %>
-		<div class="bar bar-1">
+		<div class="bar bar-3">
 			<span class="bar-text"><%= event.get("relevant_interests")[0].toUpperCase() %></span>
 		</div>
 		<% }if(event.get("relevant_interests").length > 1){ %>
@@ -17,7 +17,7 @@
 			<span class="bar-text"><%= event.get("relevant_interests")[1].toUpperCase() %></span>
 		</div>
 		<% }if(event.get("relevant_interests").length > 2){ %>
-		<div class="bar bar-3">
+		<div class="bar bar-1">
 			<span class="bar-text"><%= event.get("relevant_interests")[2].toUpperCase() %></span>
 		</div>
 		<% } %>
