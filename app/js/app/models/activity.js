@@ -27,21 +27,6 @@ define([
       }else{
         return days + " DAYS AGO";
       }
-    },
-    get_activity_description: function(){
-      var author = this.get("author");
-      var event = this.get("event");
-      if(this.get("action") == "join"){
-        var appender = "";
-        if(Math.random() < 0.5){
-          appender = "from " + author.get("location_name");
-        }else{
-          appender = "works in " + author.get("industry_name");
-        }
-        return ["A new guest arrived, please welcome:", author.get("display_name") + "<br>" + appender];
-      }else{
-        return [author.get("display_name") + " is attending", event.get("title")];
-      }
     }
   });
   return Activity;

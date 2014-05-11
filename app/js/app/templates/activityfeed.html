@@ -2,8 +2,8 @@
 	<ul class="activity-list">
 		<% _.each(activities, function(activity){ %>
 			<div class="activity-item">
-				<p class="pre-title"><%= activity.get_activity_description()[0] %></p>
-				<p class="activity-text"><%= activity.get_activity_description()[1] %></p>
+				<p class="pre-title"><%= get_activity_description(activity)[0] %></p>
+				<p class="activity-text"><%= get_activity_description(activity)[1] %></p>
 				<p class="start-time">~<%= activity.get_relative_time_string()%>~</p>
 				<p class="ellipsis">. . .</p>
 			</div>
