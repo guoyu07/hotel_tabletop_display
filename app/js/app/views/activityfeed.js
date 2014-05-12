@@ -10,6 +10,12 @@ define([
 	var ActivityFeedView = Backbone.View.extend({
 		tagName: "div",
 		template: _.template(activityFeedTemplate),
+		events: {
+			'click .activity-item': 'on_activity_item_click'
+		},
+		on_activity_item_click: function(){
+			Backbone.trigger("toggleMode");
+		},
 		initialize: function(){
 			var self = this;
 			ActivitySet.fetch({

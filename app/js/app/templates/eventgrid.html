@@ -1,32 +1,35 @@
-<div class="slideshow">
-	<% _.each(events, function(event, index, list){%>
-		<% if(index%4==0){ %> <div class="slide"> <div class="box box-1">
-		<% }else if(index%4 == 1){ %> <div class="box box-2">
-		<% }else if(index%4 == 2){ %> <div class="box box-3">
-		<% }else{ %> <div class="box box-4"> <% } %>
-		<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
-		<p class="event-description"><%=event.get("description")%></p>
-		<h2 class="event-time-location"><%= event.get_time_and_location() %></h2>
+<span class="event-grid-title">UPCOMING <strong>EVENTS</strong></span>
+<div id="grid-container" class="grid">
+	<div class="slideshow">
+		<% _.each(events, function(event, index, list){%>
+			<% if(index%4==0){ %> <div class="slide"> <div class="box box-1">
+			<% }else if(index%4 == 1){ %> <div class="box box-2">
+			<% }else if(index%4 == 2){ %> <div class="box box-3">
+			<% }else{ %> <div class="box box-4"> <% } %>
+			<h2 class="event-title"><%=event.get("title").toUpperCase()%></h2>
+			<p class="event-description"><%=event.get("description")%></p>
+			<h2 class="event-time-location"><%= event.get_time_and_location() %></h2>
 
-		<% if(event.get("relevant_interests").length > 0) { %>
-		<div class="bar bar-3">
-			<span class="bar-text"><%= event.get("relevant_interests")[0].toUpperCase() %></span>
+			<% if(event.get("relevant_interests").length > 0) { %>
+			<div class="bar bar-3">
+				<span class="bar-text"><%= event.get("relevant_interests")[0].toUpperCase() %></span>
+			</div>
+			<% }if(event.get("relevant_interests").length > 1){ %>
+			<div class="bar bar-2">
+				<span class="bar-text"><%= event.get("relevant_interests")[1].toUpperCase() %></span>
+			</div>
+			<% }if(event.get("relevant_interests").length > 2){ %>
+			<div class="bar bar-1">
+				<span class="bar-text"><%= event.get("relevant_interests")[2].toUpperCase() %></span>
+			</div>
+			<% } %>
+			<span class="attending-number"><%= event.get("attending_count")%></span>
+			<span class="attending-word">ATTENDING</span>
+			<img class="attending-icon" src="assets/businessman.png">
 		</div>
-		<% }if(event.get("relevant_interests").length > 1){ %>
-		<div class="bar bar-2">
-			<span class="bar-text"><%= event.get("relevant_interests")[1].toUpperCase() %></span>
-		</div>
-		<% }if(event.get("relevant_interests").length > 2){ %>
-		<div class="bar bar-1">
-			<span class="bar-text"><%= event.get("relevant_interests")[2].toUpperCase() %></span>
-		</div>
-		<% } %>
-		<span class="attending-number"><%= event.get("attending_count")%></span>
-		<span class="attending-word">ATTENDING</span>
-		<img class="attending-icon" src="assets/businessman.png">
+			<% if (index%4==3 || index == list.length - 1){%>
+			</div>
+			<% } %>
+		<% }); %>
 	</div>
-		<% if (index%4==3 || index == list.length - 1){%>
-		</div>
-		<% } %>
-	<% }); %>
-	</div>
+</div>

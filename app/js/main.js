@@ -19,7 +19,11 @@ require.config({
         },
         slick: {
             deps: ['jquery']
-        }
+        },
+				freewall: {
+					deps: ['jquery'],
+					exports: 'freewall'
+				}
     },
     paths: {
         jquery: '../lib/jquery',
@@ -28,7 +32,8 @@ require.config({
         bootstrap: '../../css/bootstrap/js/bootstrap',
         text: '../lib/require-text',
         slick: '../../css/slick/slick',
-        moment: '../lib/moment'
+        moment: '../lib/moment',
+				freewall: '../lib/freewall'
     }
 });
 
