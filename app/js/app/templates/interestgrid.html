@@ -1,6 +1,12 @@
 <div id="interest-grid">
   <div id="freewall" class="free-wall">
-    <div class='brick brick-1' style='background-color: blue'><div class='cover'>Demo fit zone</div></div>
-    <div class='brick brick-2' style='background-color: blue'><div class='cover'>Demo fit zone</div></div>
+  	<%console.log(interests); %>
+  	<% _.each(interests.secondary_categories, function(interest){ %>
+  	<div class='brick' style='width:100px; height: 100px; background-color: blue'>
+  		<div class='cover'>
+  			<%= title_for_interest(interest) %>
+  		</div>
+  	</div>
+  	<% });%>
   </div>
 </div>

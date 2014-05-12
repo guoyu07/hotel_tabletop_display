@@ -26,14 +26,6 @@
 #interest-grid .brick {
   background: blue;
 }
-#interest-grid .brick-1 {
-  width: 500px;
-  height: 500px;
-}
-#interest-grid .brick-2 {
-  width: 200px;
-  height: 100px;
-}
 #interest-grid .free-wall .brick[data-state="init"] {
   display: none;
 }
