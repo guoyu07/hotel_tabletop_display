@@ -1,11 +1,11 @@
 <div id="interest-grid">
   <div id="freewall" class="free-wall" style="overflow: scroll;">
   	<% _.each(interests.secondary_categories, function(interest){ %>
-  	<div class='brick brick-1' style='background-color: rgba(240,240,240,0.4)'>
+  	<div class='brick' data-fixSize=1>
   		<p style="text-align:center; margin-top:5px; margin-bottom:5px; font-size:2em; color: white"><%= title_for_interest(interest)[0] %></p>
   		<div style="position:absolute; bottom:10px; text-align:center; width:100%">
-	  		<p style="text-align:center; margin:0; color: rgb(50,50,50)">~<%= title_for_interest(interest)[1].toUpperCase() %>~</p>
-	  		<p style="text-align:center; margin:0; color: rgb(130,0,0)"><strong><%= title_for_interest(interest)[2].toUpperCase() %></strong></p>
+	  		<p style="text-align:center; margin:0; color: rgb(50,50,50); font-size:0.5em;">~<%= title_for_interest(interest)[1].toUpperCase() %>~</p>
+	  		<p style="text-align:center; margin:0; color: rgb(130,0,0); font-size:0.5em;"><strong><%= title_for_interest(interest)[2].toUpperCase() %></strong></p>
   		</div>
   	</div>
   	<% });%>

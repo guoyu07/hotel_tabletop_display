@@ -23,6 +23,7 @@ define([
     },
     render: function(){
         if(this.interests === null || this.interests === undefined){
+            console.log("No data");
             return;
         }
 
