@@ -34,35 +34,35 @@ define([
         wall.reset({
             selector: '.brick',
             animate: false,
-            cellW: 160,
-            cellH: 160,
+            // cellW: 160,
+            // cellH: 160,
             delay: 30,
             onResize: function() {
                 wall.refresh();
             }
         });
         // caculator width and height for IE7;
-        wall.fitZone();
+        wall.fitHeight();
     },
     title_for_interest: function(interest){
         if(interest.location_name !== undefined){
-            return interest.n + " come(s) from " + interest.location_name;
+            return [interest.n, " come(s) from ", interest.location_name];
         }
 
         if(interest.company_name !== undefined){
-            return interest.n + " work(s) for " + interest.company_name;
+            return [interest.n, " work(s) for ", interest.company_name];
         }
 
         if(interest.industry_name !== undefined){
-            return interest.n + " work(s) in " + interest.industry_name;
+            return [interest.n, " work(s) in ", interest.industry_name];
         }
 
         if(interest.interest_name !== undefined){
-            return interest.n + " like " + interest.interest_name;
+            return [interest.n, " like ", interest.interest_name];
         }
 
         if(interest.school_name !== undefined){
-            return interest.n + " studied at " + interest.school_name;
+            return [interest.n, " studied at ", interest.school_name];
         }
 
     }
