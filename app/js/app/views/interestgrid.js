@@ -29,7 +29,8 @@ define([
 
         this.$el.html(this.template({
             interests: this.interests,
-            title_for_interest: this.title_for_interest
+            title_for_interest: this.title_for_interest,
+            brick_size: this.brick_class_size_for_interest
         }));
         var wall = new freewall("#freewall");
         wall.reset({
@@ -44,6 +45,18 @@ define([
         });
         // caculator width and height for IE7;
         wall.fitHeight();
+    },
+
+    brick_class_size_for_interest: function(interest){
+        if(interest.n < 1){
+            return "1";
+        }else if(interest.n < 3){
+            return "3";
+        }else if(interest.n < 8){
+            return "8";
+        }else{
+            return "10";
+        }
     },
     title_for_interest: function(interest){
         if(interest.location_name !== undefined){

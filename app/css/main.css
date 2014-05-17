@@ -29,12 +29,129 @@
 }
 #interest-grid .brick {
   background-color: rgba(240, 240, 240, 0.4);
+}
+#interest-grid .brick-1 {
   width: 80px;
   height: 80px;
 }
-#interest-grid .brick-1 {
-  width: 150px;
-  height: 150px;
+#interest-grid .brick-1 .text-div {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+#interest-grid .brick-1 .interest-number {
+  margin-top: 0px;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+#interest-grid .brick-1 .description {
+  text-align: center;
+  color: #820000;
+}
+#interest-grid .brick-1 .intro {
+  text-align: center;
+  color: #323232;
+  margin-bottom: 0px;
+}
+#interest-grid .brick-1 .intro,
+#interest-grid .brick-1 .description {
+  font-size: 5pt;
+}
+#interest-grid .brick-3 {
+  width: 160px;
+  height: 50px;
+}
+#interest-grid .brick-3 .text-div {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  width: 50%;
+  text-align: center;
+}
+#interest-grid .brick-3 .interest-number {
+  color: white;
+  position: absolute;
+  text-align: left;
+  margin: 0;
+  top: 15px;
+  left: 30px;
+  font-size: 3em;
+}
+#interest-grid .brick-3 .description {
+  text-align: center;
+  margin: 0;
+  color: #820000;
+}
+#interest-grid .brick-3 .intro {
+  text-align: center;
+  margin: 0;
+  color: #323232;
+}
+#interest-grid .brick-3 .intro,
+#interest-grid .brick-3 .description {
+  font-size: 8pt;
+}
+#interest-grid .brick-8 {
+  width: 320px;
+  height: 100px;
+}
+#interest-grid .brick-8 .text-div {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  width: 60%;
+  text-align: center;
+}
+#interest-grid .brick-8 .interest-number {
+  color: white;
+  position: absolute;
+  text-align: center;
+  margin: 0;
+  left: 40px;
+  font-size: 5em;
+}
+#interest-grid .brick-8 .description {
+  text-align: center;
+  margin: 0;
+  color: #820000;
+}
+#interest-grid .brick-8 .intro {
+  text-align: center;
+  margin: 0;
+  color: #323232;
+}
+#interest-grid .brick-8 .intro,
+#interest-grid .brick-8 .description {
+  font-size: 10pt;
+}
+#interest-grid .brick-10 {
+  width: 160px;
+  height: 160px;
+}
+#interest-grid .brick-10 .text-div {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+#interest-grid .brick-10 .interest-number {
+  margin-top: 0px;
+  font-size: 5em;
+  color: white;
+  text-align: center;
+}
+#interest-grid .brick-10 .description {
+  text-align: center;
+  color: #820000;
+}
+#interest-grid .brick-10 .intro {
+  text-align: center;
+  color: #323232;
+  margin-bottom: 0px;
+}
+#interest-grid .brick-10 .intro,
+#interest-grid .brick-10 .description {
+  font-size: 12pt;
 }
 #interest-grid .free-wall .brick[data-state="init"] {
   display: none;
