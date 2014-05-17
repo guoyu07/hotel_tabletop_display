@@ -10,20 +10,23 @@ define([
     tagName: 'div',
     template: _.template(interestGridTemplate),
     interests: null,
+    cancel_render: false,
     initialize: function(){
-        var self = this;
-        $.ajax({
-            method: "GET",
-            url: "http://mel-devel.media.mit.edu/sixdegrees/publicdisplay/screen_two/",
-            success: function(data){
-                self.interests = data[Math.round(Math.random()*data.length)];
-                self.render();
-            }
-        });
     },
     render: function(){
         if(this.interests === null || this.interests === undefined){
-            console.log("No data");
+            var self = this;
+            $.ajax({
+                method: "GET",
+                url: "http://mel-devel.media.mit.edu/sixdegrees/publicdisplay/screen_two/",
+                success: function(data){
+                    if(self.cancel_render)
+                        return;
+                    self.cancel_render = true;
+                    self.interests = data[Math.round(Math.random()*data.length)];
+                    self.render();
+                }
+            });
             return;
         }
 
