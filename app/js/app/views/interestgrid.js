@@ -23,7 +23,8 @@ define([
                     if(self.cancel_render)
                         return;
                     self.cancel_render = true;
-                    self.interests = data[Math.round(Math.random()*data.length)];
+
+                    self.interests = data[Math.floor(Math.random()*data.length)];
                     self.render();
                 }
             });
@@ -35,6 +36,7 @@ define([
             title_for_interest: this.title_for_interest,
             brick_size: this.brick_class_size_for_interest
         }));
+        //console.log(this.title_for_interest(this.interests));
         var wall = new freewall("#freewall");
         wall.reset({
             selector: '.brick',
@@ -51,11 +53,11 @@ define([
     },
 
     brick_class_size_for_interest: function(interest){
-        if(interest.n < 1){
+        if(interest.n <= 1){
             return "1";
-        }else if(interest.n < 3){
+        }else if(interest.n <= 3){
             return "3";
-        }else if(interest.n < 8){
+        }else if(interest.n <= 8){
             return "8";
         }else{
             return "10";
