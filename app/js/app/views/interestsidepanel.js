@@ -10,19 +10,18 @@ define([
 	var InterestSidePanelView = Backbone.View.extend({
 		tagName: "div",
 		template: _.template(interestSidePanelView),
+		data: ["","",""],
 		events: {
 		},
 		initialize: function(){
-			console.log(this.template());
 			var self = this;
-			ActivitySet.fetch({
-				success: function(data){
-					self.render();
-				}
+			this.listenTo(Backbone, "typed", function(data){
+				self.data = data;
+				self.render();
 			});
 		},
 		render: function(){
-			this.$el.html(this.template());
+			this.$el.html(this.template({"data":this.data}));
 		}
 	});
 

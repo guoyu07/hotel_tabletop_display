@@ -23,8 +23,9 @@ define([
                     if(self.cancel_render)
                         return;
                     self.cancel_render = true;
-
+                    console.log(data);
                     self.interests = data[Math.floor(Math.random()*data.length)];
+                    Backbone.trigger("typed", self.title_for_interest(self.interests));
                     self.render();
                 }
             });

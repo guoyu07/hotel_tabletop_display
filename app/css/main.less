@@ -6,6 +6,39 @@
 @vertical_offset: 50px;
 @horizontal_offset: 50px;
 
+.interest-side-panel{
+  position: absolute;
+  height: @grid_height;
+  width: @activity_width;
+  top: @vertical_offset;
+  left: @horizontal_offset;
+  .side-panel-number{
+    position: absolute; 
+    font-size:10em;
+    margin-top:@grid_height*0.05;
+    text-align: center;
+    width: @activity_width;
+  }
+  .side-panel-title{
+    position: absolute;
+    font-size:1em;
+    margin-top:@grid_height*0.35;
+    text-align: center;
+    width: @activity_width;
+  }
+  .side-panel-description{
+    position: absolute;
+    font-size:2em;
+    margin-top: @grid_height*0.4;
+    text-align: center;
+    width: @activity_width;
+  }
+  .triangle{
+    height: @grid_height;
+    width: @grid_width;
+  }
+}
+
 #interest-grid {
 			position: absolute;
 			right: 0px;
@@ -309,14 +342,6 @@ body{
     }
   }
 
-}
-
-.interest-side-panel{
-  position: absolute;
-  height: @grid_height;
-  width: @activity_width;
-  top: @vertical_offset;
-  left: @horizontal_offset;
 }
 
 .activity-feed{
