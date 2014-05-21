@@ -30,6 +30,9 @@
   height: 700px;
   width: 1000px;
 }
+.interest-side-panel .back-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 #interest-grid {
   position: absolute;
   right: 0px;
