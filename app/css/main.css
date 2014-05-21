@@ -303,6 +303,13 @@ body {
   height: 50px;
   opacity: 0.5;
 }
+.interest-side-panel {
+  position: absolute;
+  height: 700px;
+  width: 350px;
+  top: 50px;
+  left: 50px;
+}
 .activity-feed {
   position: absolute;
   height: 700px;

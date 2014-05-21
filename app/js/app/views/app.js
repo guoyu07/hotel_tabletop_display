@@ -5,8 +5,9 @@ define([
     'common',
     'views/activityfeed',
     'views/eventgrid',
-    'views/interestgrid'
-], function($, _, Backbone, Common, ActivityFeedView, EventGridView, InterestGridView) {
+    'views/interestgrid',
+    'views/interestsidepanel'
+], function($, _, Backbone, Common, ActivityFeedView, EventGridView, InterestGridView, InterestSidePanelView) {
     /**
      * The top-level piece of UI for the App.
      */
@@ -40,6 +41,8 @@ define([
           this.activityFeedView = new ActivityFeedView();
           this.eventGridView = new EventGridView();
           this.interestGridView = new InterestGridView();
+          this.interestSidePanelView = new InterestSidePanelView();
+
           if(!this.show_interest_grid){
             $("#activity-feed-container").append(this.activityFeedView.$el);
             this.activityFeedView.render();
@@ -47,6 +50,9 @@ define([
             $("#main_grid").append(this.eventGridView.$el);
             this.eventGridView.render();
           }else{
+            $("#activity-feed-container").append(this.interestSidePanelView.$el);
+            this.interestSidePanelView.render();
+
             $("#main_grid").append(this.interestGridView.$el);
             this.interestGridView.render();
           }
